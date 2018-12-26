@@ -1,12 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @pic.description %>
-  <%= image_tag @pic.image.url(:medium) %><br/>
-</p>
-
-<% if @pic.user == current_user %>
-	<%= link_to 'Edytuj', edit_pic_path(@pic) %>
-<% end %>
-<%= link_to 'Powrót', pics_path %>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-heading center">
+				<%= image_tag @pic.image.url(:medium) %>
+			</div>
+			<div class="panel-body">
+				<%= @pic.description %><br/>
+				<% if @pic.user == current_user %>
+					<%= link_to 'Edycja', edit_pic_path(@pic) %>
+				<% end %>
+				<%= link_to 'Wstecz', pics_path %>
+			</div>
+		</div>
+	</div>
+</div>
