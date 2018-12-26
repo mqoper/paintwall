@@ -37,6 +37,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 
 ###
+gem 'paperclip', '~> 6.1'
 gem 'devise', '~> 4.5'
 gem 'bootstrap-sass', '~> 3.4'
 

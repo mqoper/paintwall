@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Obraz</th>
       <th>Description</th>
       <th colspan="3"></th>
     </tr>
@@ -13,9 +14,10 @@
   <tbody>
     <% @pics.each do |pic| %>
       <tr>
+        <td><%= image_tag pic.image.url(:medium) %></td>
         <td><%= pic.description %></td>
         <td><%= link_to 'Wyświetl', pic %></td>
-        <% if pic.user == currnet_user %>
+        <% if pic.user == current_user %>
           <td><%= link_to 'Edytuj', edit_pic_path(pic) %></td>
         <td><%= link_to 'Usuń', pic, method: :delete, data: { confirm: 'Jesteś pewien?' } %></td>
         <% end %>
