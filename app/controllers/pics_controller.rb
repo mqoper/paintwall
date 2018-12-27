@@ -32,7 +32,7 @@ class PicsController < ApplicationController
 
     respond_to do |format|
       if @pic.save
-        format.html { redirect_to @pic, notice: 'Pic was successfully created.' }
+        format.html { redirect_to @pic, notice: 'Dodałeś PIC' }
         format.json { render :show, status: :created, location: @pic }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class PicsController < ApplicationController
   def update
     respond_to do |format|
       if @pic.update(pic_params)
-        format.html { redirect_to @pic, notice: 'Pic was successfully updated.' }
+        format.html { redirect_to @pic, notice: 'Zmieniłeś PIC' }
         format.json { render :show, status: :ok, location: @pic }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class PicsController < ApplicationController
   def destroy
     @pic.destroy
     respond_to do |format|
-      format.html { redirect_to pics_url, notice: 'Pic was successfully destroyed.' }
+      format.html { redirect_to pics_url, notice: 'Usunąłeś PIC' }
       format.json { head :no_content }
     end
   end

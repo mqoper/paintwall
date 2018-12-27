@@ -45,6 +45,7 @@ gem 'masonry-rails', '~> 0.2.4'
 gem 'paperclip', '~> 6.1'
 gem 'devise', '~> 4.5'
 gem 'bootstrap-sass', '~> 3.4'
+gem 'sassc-rails', '>= 2.0.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
