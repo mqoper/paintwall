@@ -23,7 +23,12 @@
   </div>
 
   <div class="actions">
+    <% if request.env['PATH_INFO'].split("/").last == "edit" %>
+    <%= form.submit "Edytuj PIC" %>
+    <% elsif %>
     <%= form.submit "Dodaj PIC" %>
+    <% end %>
+      
   </div>
 <% end %>
 

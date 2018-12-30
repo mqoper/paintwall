@@ -1,20 +1,15 @@
 <div id="pics" class="transitions-enabled">
   <% @pics.each do |pic| %>
-    <div class="box">
-      <div class ="panel panel-default">
+    <div class="box panel panel-default">
+      
         <%= link_to image_tag(pic.image.url(:medium)), pic %><br/>
-          <div class="panel-body">
-            <%= link_to 'Usuń', pic, method: :delete, data: { confirm: 'Jesteś pewien?' } %><br/>
-            <%= pic.description %><br/>
-            <br/><strong><%= pic.user.name if pic.user %></strong><br/>
-          </div>
           <% if pic.user == current_user %>
             <div class="panel-footer">
               <%= link_to 'Edytuj', edit_pic_path(pic) %><br/>
               <%= link_to 'Usuń', pic, method: :delete, data: { confirm: 'Jesteś pewien?' } %><br/>
             </div>
         <% end %>
-      </div>
+      
     </div>
   <% end %>
 </div>

@@ -6,7 +6,7 @@
 			</div>
 			<div class="panel-body">
 				<%= @pic.description %><br/>
-				<br/><%= @pic.user.name %><br/>
+				<br/><b>Dodał: </b><%= @pic.user.name %><br/>
 				<% if @pic.user == current_user %>
 					<%= link_to 'Edycja', edit_pic_path(@pic) %>
 				<% end %>
